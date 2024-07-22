@@ -178,6 +178,10 @@ body{
   cursor: default;
 }
 
+.menu-item{
+  transition: color 0.3s ease-in-out, cursor 0.3s ease-in-out;
+}
+
 .menu-item:hover {
   color: #fff;
   border-bottom: none;
@@ -233,23 +237,36 @@ body{
 
 .button {
   border-radius: 100px;
-  padding: 15px 45px;
-  width: 207px;
-  height: 52px;
-  background: #f1cdb3;
-  border: none;
+  padding: 13px 43px;
+  width: 100%;
+  height: 100%;
+  max-width: 207px;
+  max-height: 52px;
+  background-color: #fafafa;
+  border: 2px solid #f1cdb3;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 17px; 
-  text-align: 130%;
+  line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .button:hover {
   cursor:pointer;
-  background: #fddcc4;
+  background-color: #fddcc4;
+  border: 2px solid #fddcc4;
 }
+
+.button-colored{
+  background: #f1cdb3;
+}
+
+.button-colored:hover{
+  border: 2px solid #fddcc4
+}
+
 /* Start-screen end */
 
 /* About section start */
@@ -331,10 +348,12 @@ body{
 
 
 .arrow-left:hover svg, .arrow-right:hover svg{
+  cursor:pointer;
   fill: #FDDCC4;
 }
 
 .arrow-left:hover rect, .arrow-right:hover rect {
+  cursor: pointer;
   stroke: #FDDCC4;
 }
 
@@ -345,15 +364,18 @@ body{
 }
 
 .card {
+  max-height: 435px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #fafafa;
+  border-radius: 9px;
+  transition: all 0.5s ease-in-out;
 }
 
 .card-name {
   width: 100%;
-  height: 100%;
+  height: 23px;
   margin: 30px 0;
   font-weight: 400;
   font-size: 20px;
@@ -363,7 +385,20 @@ body{
 }
 
 .card .button {
+  max-width: 187px;
+  max-height: 52px;
   margin-bottom: 30px;
+  letter-spacing: 0.06em;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.our-friends-section .button-colored{
+  max-width: 261px;
 }
 
 /* Pets section end */
