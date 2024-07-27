@@ -211,6 +211,7 @@ body{
 }
 
 .heading {
+  font-family: var(--font-family);
   font-weight: 400;
   line-height: 1.3;
   margin: 0;
@@ -376,7 +377,7 @@ body{
 
 .name{
   width: 100%;
-  height: 23px;
+  height: 100%;
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 20px;
@@ -386,6 +387,7 @@ body{
 }
 
 .card-name {
+  max-height: 23px;
   margin: 30px 0;
 }
 
@@ -493,8 +495,8 @@ body{
 .link {
   text-decoration: none;
 }
+
 .card-number-link{
-  padding: 10px 15px;
   display:inline-block;
   max-width: 274px;
   padding: 10px 15px;
@@ -533,3 +535,90 @@ body{
   color:  #b2b2b2;
 }
 /* In-addition section end */
+
+/* Footer start */
+.footer{
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+}
+
+.footer .content-container {
+  display: flex;
+  justify-content: left;
+  column-gap: 160px;
+  padding: 56px 40px 60px;
+  background-image: url(../../assets/images/footer-puppy.png);
+  background-position: bottom right 40px;
+  background-repeat: no-repeat;
+  background-size: content;
+}
+
+.footer-contacts,
+.footer-locations{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 234px;
+}
+
+.footer-contacts{
+  max-width: 278px;
+}
+
+.footer-locations{
+  max-width: 302px;
+}
+
+.footer-heading {
+  max-height: 90px;
+  font-size: 35px;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+
+.phone-link, .email-link,
+.location-link{
+  display:inline-block;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%; 
+  letter-spacing: 0.06em;
+  color: #f1cdb3;
+  border-radius: 9px;
+  transition: color 0.2s ease-in-out;
+}
+
+.email-link{
+  background: url(../../assets/images/icon-email.svg) no-repeat 0px 0px;
+  background-size: 40px 32px;
+  padding: 4px 0 5px 60px;
+}
+
+.phone-link{
+  background: url(../../assets/images/icon-phone.svg) no-repeat 0px 0px;
+  background-size: 40px 32px;
+  padding: 5px 0 4px 60px;
+}
+
+.location-link{
+  background: url(../../assets/images/icon-marker.svg) no-repeat 0px 7px;
+  background-size: 22px 32px;
+  padding-left: 42px;
+}
+
+.location-london{
+  background-position: 0 0;
+  padding: 5px 0px 4px 42px;
+}
+
+.contact-name,
+.location-name{
+  display: inline-block;
+  margin: 0;
+}
+
+.phone-link:hover, .email-link:hover,
+.location-link:hover{
+  color: #fddcc4;
+}
+/* Footer end */
