@@ -231,6 +231,8 @@ body{
   line-height: 1.6;
   text-align: justify;
   color: #cdcdcd;
+  width: 100%;
+  height: 100%;
   max-width: 460px;
   margin: 0;
 }
@@ -264,13 +266,12 @@ body{
 }
 
 .button-colored:hover{
-  border: 2px solid #fddcc4
+  border: 2px solid #fddcc4;
 }
 
 /* Start-screen end */
 
 /* About section start */
-
 .about-section {
   background-color: #fff;
 }
@@ -443,3 +444,92 @@ body{
 }
 
 /* Help section end */
+
+/* In-addition section start */
+.in-addition-section {
+  background-color:  #f6f6f6;
+}
+
+.in-addition-section .content-container {
+  padding-left: 183px;
+  padding-right: 182px;
+  text-align: justify;
+}
+
+.donation-dog-image{
+  display: inline-block;
+  margin-top: 11px;
+}
+
+.in-addition-section .content-wrapper{
+  max-width: 380px;
+  display: inline-flex;
+  flex-direction: column;
+  row-gap: 20px;
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+.in-addition-section .heading{
+  font-size: 35px;
+  color: #545454;
+  letter-spacing: 0.06em;
+  text-align:start;
+  max-width: 300px;
+  max-height: 90px;
+}
+
+.in-addition-section .subheading{
+  font-family: var(--font-family);
+  font-weight: 400;
+  line-height: 115%;
+  text-align:left;
+  color: #545454;
+  max-width: 307px;
+  max-height: 17px;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+.card-number-link{
+  padding: 10px 15px;
+  display:inline-block;
+  max-width: 274px;
+  padding: 10px 15px;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%; 
+  letter-spacing: 0.06em;
+  color: #545454;
+  background-color: #f1cdb3;
+  background: url(../../assets/images/credit-card.svg) no-repeat 15px 10px,  #f1cdb3 ;
+  background-size: 30px 23px;
+  padding-left: 60px;
+  border-radius: 9px;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.card-number-link:focus {
+  background-color: #fddcc4;
+}
+
+.card-number-link:hover {
+  background-color: #fddcc4;
+}
+
+
+.in-addition-paragraph{
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-style: italic;
+  font-size: 12px;
+  text-align: left;
+  line-height: 1.5;
+  color:  #b2b2b2;
+}
+/* In-addition section end */
