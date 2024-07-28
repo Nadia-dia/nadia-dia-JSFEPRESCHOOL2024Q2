@@ -479,7 +479,7 @@ body{
 
 .help-item-name{
   margin: 30px 0 0;
-  line-height: 115%;
+  line-height: 95%;
   letter-spacing: 0.0565em;
 }
 
@@ -507,7 +507,7 @@ body{
   flex-direction: column;
   row-gap: 20px;
   vertical-align: top;
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 .in-addition-section .heading{
@@ -525,6 +525,7 @@ body{
   line-height: 115%;
   text-align:left;
   color: #545454;
+  letter-spacing: 0.06em;
   max-width: 307px;
   max-height: 17px;
   margin: 0;
