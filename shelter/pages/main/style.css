@@ -117,6 +117,7 @@ body{
 }
 
 .header .content-container {
+  max-height: 908px;
   padding: 30px 40px 0px;
 }
 
@@ -162,14 +163,17 @@ body{
   list-style: none;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   margin: 16px 0 0;
   padding: 0;
   gap: 35px;
 }
 
-.menu-item, .menu-item-active {
-  box-sizing: border-box;
+.menu-item{
+  transition: color 0.3s ease-in-out, border-bottom 0.1s ease-in-out;
+}
+
+.menu-item>.link, .menu-item-active {
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 15px;
@@ -178,11 +182,14 @@ body{
   cursor: default;
 }
 
-.menu-item{
+.menu-item>.link{
+  display:inline-block;
+  margin-bottom: 3px;
+  vertical-align: top;
   transition: color 0.3s ease-in-out, cursor 0.3s ease-in-out;
 }
 
-.menu-item:hover {
+.menu-item:hover>.link{
   color: #fff;
   border-bottom: none;
   cursor: pointer;
@@ -191,6 +198,10 @@ body{
 .menu-item-active, .menu-item:active {
   color: #fafafa;
   border-bottom: 3px solid #f1cdb3;
+}
+
+.menu-item:active>.link{
+  margin-bottom: 0;
 }
 
 .start-screen{
@@ -253,6 +264,7 @@ body{
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #292929;
+  color: #292929;
   transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
@@ -268,6 +280,15 @@ body{
 
 .button-colored:hover{
   border: 2px solid #fddcc4;
+}
+
+.make-friend-link{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px; 
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
 }
 
 /* Start-screen end */
@@ -408,6 +429,15 @@ body{
   max-width: 261px;
 }
 
+.get-to-know-link{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 17px; 
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #292929;
+}
+
 /* Pets section end */
 
 /* Help section start */
@@ -522,7 +552,6 @@ body{
 .card-number-link:hover {
   background-color: #fddcc4;
 }
-
 
 .in-addition-paragraph{
   margin: 0;
