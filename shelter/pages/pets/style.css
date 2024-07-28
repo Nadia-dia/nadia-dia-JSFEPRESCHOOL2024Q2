@@ -124,7 +124,6 @@ body{
   padding: 30px 40px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 90px;
 }
 
 .logo{
@@ -191,26 +190,131 @@ body{
     cursor: default;
 }
   
-  .menu-item>.link{
+.menu-item>.link{
     display:inline-block;
     margin-bottom: 3px;
     vertical-align: top;
     letter-spacing: 0.0025em;
     transition: color 0.3s ease-in-out, cursor 0.3s ease-in-out;
-  }
+}
   
-  .menu-item:hover>.link{
+.menu-item:hover>.link{
     color: #292929;
     border-bottom: none;
     cursor: pointer;
-  }
+}
   
-  .menu-item-active, .menu-item:active {
+.menu-item-active, .menu-item:active {
     border-bottom: 3px solid #f1cdb3;
-  }
+}
   
-  .menu-item:active>.link{
+.menu-item:active>.link{
     margin-bottom: 0;
-  }
+}
+/* Header End*/
 
-  /* Header End*/
+/* Pets start*/
+.our-friends-section{
+    background-color: #f6f6f6;
+}
+
+.our-friends-section .content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+    padding: 80px 40px 100px;
+}
+
+.heading {
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.our-friends-section .heading{
+    font-size: 35px;
+    color: #545454;
+    letter-spacing: 0.06em;
+    text-align:center;
+    max-width: 400px;
+    max-height: 90px;
+}
+
+.cards-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    min-height: 930px;
+    align-content: space-around;
+}
+
+.card {
+    max-height: 435px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+    background-color: #fafafa;
+    border-radius: 9px;
+    transition: all 0.5s ease-in-out;
+}
+  
+.name{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    color: #545454; 
+}
+
+.card-name {
+    max-height: 23px;
+}
+  
+.button {
+    border-radius: 100px;
+    padding: 13px 43px;
+    width: 100%;
+    height: 100%;
+    max-width: 207px;
+    max-height: 52px;
+    background-color: #fafafa;
+    border: 2px solid #f1cdb3;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 17px; 
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.card .button {
+    max-width: 187px;
+    max-height: 52px;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+}
+  
+.card:hover {
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+}
+
+.card:hover button {
+    cursor:pointer;
+    background-color: #fddcc4;
+    border: 2px solid #fddcc4;
+}
+
+
+/* Pets End*/
