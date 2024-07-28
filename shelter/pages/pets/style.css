@@ -350,8 +350,7 @@ body{
 }
 
 .page-number:hover{
-    background-color: #fddcc4;
-    cursor:pointer;
+    cursor:auto;
 }
 
 .arrow.active:hover{
