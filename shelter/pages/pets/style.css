@@ -245,11 +245,12 @@ body{
 }
 
 .cards-wrapper{
+    padding: 15px 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 30px 40px;
-    min-height: 930px;
-    align-content: space-around;
+    column-gap:40px;
+    row-gap:30px;
+    max-height: 930px;
 }
 
 .card {
@@ -315,6 +316,54 @@ body{
     background-color: #fddcc4;
     border: 2px solid #fddcc4;
 }
+/* Pagination Start*/
+.navigation{
+    display:flex;
+    gap: 20px;
+}
 
+.arrow{
+    max-height: 52px;
+    border:none;
+    padding: 0;
+    background-color: #f6f6f6;
+}
 
+.arrow rect {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.arrow svg{
+  transition: fill 0.3s ease-in-out;
+}
+
+.page-number{
+    padding:15px 21px;
+    max-width: 52px;
+    max-height: 52px;
+    border-radius: 100px;
+    background-color: #f1cdb3;
+    border: none;
+    font-size: 20px;
+    line-height: 115%;
+    text-align: center;
+}
+
+.page-number:hover{
+    background-color: #fddcc4;
+    cursor:pointer;
+}
+
+.arrow.active:hover{
+    cursor:pointer;
+}
+
+.arrow.active:hover svg{
+    fill:#fddcc4;
+}
+
+.arrow.active:hover rect{
+    stroke:#fddcc4;
+}
+/* Pagination End*/
 /* Pets End*/
