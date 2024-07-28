@@ -289,16 +289,6 @@ body{
 .button-colored:hover{
   border: 2px solid #fddcc4;
 }
-
-.make-friend-link{
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 17px; 
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #292929;
-}
-
 /* Start-screen end */
 
 /* About section start */
@@ -436,16 +426,6 @@ body{
 .our-friends-section .button-colored{
   max-width: 261px;
 }
-
-.get-to-know-link{
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 17px; 
-  line-height: 130%;
-  letter-spacing: 0.06em;
-  color: #292929;
-}
-
 /* Pets section end */
 
 /* Help section start */
