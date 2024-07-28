@@ -1,0 +1,216 @@
+/* georgia-700-italic - latin */
+@font-face {
+    font-family: 'Georgia';
+    font-style: italic;
+    font-weight: 700;
+    src: local("Georgia Bold Italic"), local("Georgia-Bold-Italic"), 
+        url('../../assets/fonts/georgia/georgia-bold-italic.ttf') format('ttf'); 
+  }  
+
+/* georgia-700 - latin */
+@font-face {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Georgia Bold"), local("Georgia-Bold"),
+         url('../../assets/fonts/georgia/georgia-bold.ttf') format('ttf'); 
+  }
+
+/* georgia-regular-italic - latin */
+@font-face {
+    font-family: 'Georgia';
+    font-style: italic;
+    font-weight: 400;
+    src: local("Georgia Italic"), local("Georgia-Italic"), 
+        url('../../assets/fonts/georgia/georgia-italic.ttf') format('ttf'); 
+  }
+
+/* georgia-regular - latin */
+@font-face {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Georgia Regular"), local("Georgia-Regular"),
+         url('../../assets/fonts/georgia/georgia-regular.ttf') format('ttf'); 
+  }
+
+/* arial-900 - latin */
+@font-face {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 900;
+    src: local("Arial Black"), local("Arial-Black"),
+         url('../../assets/fonts/arial/arial-black.ttf') format('ttf'); 
+  }
+
+/* arial-700-italic - latin */
+@font-face {
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 700;
+    src: local("Arial Bold Italic"), local("Arial-Bold-Italic"), 
+        url('../../assets/fonts/arial/arial-bold-italic.ttf') format('ttf'); 
+  }  
+
+/* arial-700 - latin */
+@font-face {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Arial Bold"), local("Arial-Bold"),
+         url('../../assets/fonts/arial/arial-bold.ttf') format('ttf'); 
+  }
+
+/* arial-italic - latin */
+@font-face {
+    font-family: 'Arial';
+    font-style: italic;
+    font-weight: 400;
+    src: local("Arial Italic"), local("Arial-Italic"), 
+        url('../../assets/fonts/arial/arial-italic.ttf') format('ttf'); 
+  }
+
+/* arial-regular - latin */
+@font-face {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Arial Regular"), local("Arial-Regular"),
+         url('../../assets/fonts/arial/arial-regular.ttf') format('ttf'); 
+  }
+
+/* inter-regular - latin */
+@font-face {
+    font-display: swap; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Inter Regular"), local("Inter-Regular"),
+         url('../../assets/fonts/inter-v13-latin/inter-v13-latin-regular.woff2') format('woff2'); 
+  }
+ 
+:root {
+  --font-family: "Georgia", serif;
+  --second-family: "Arial", sans-serif;
+  --third-family: "Inter", sans-serif;
+}  
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* Header */
+body{
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  background-color: #fff;
+}
+
+.content-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  font-family: var(--font-family);
+}
+
+.header .content-container {
+  max-height: 120px;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.logo{
+    max-width: 184px;
+}
+
+.logo-title{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin: 1px 0 6px;
+    max-height: 35px;
+    max-width: 184px;
+    transition: color 0.3s ease-in-out;
+}
+  
+.logo-subtitle{
+    display:inline-block;
+    text-align: right;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    color: #292929;
+    max-width: 179px;
+    margin-left: 4px;
+    transition: color 0.3s ease-in-out;
+}
+  
+.logo:hover .logo-title,
+.logo:hover .logo-subtitle {
+  color:  #b2b2b2;
+}
+
+.link {
+   text-decoration: none;
+}
+
+.logo-link{
+    display: inline-block;
+    max-height: 60px;
+}
+
+.menu-list{
+    list-style: none;
+    min-width: 443px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin: 16px 0 0;
+    padding: 0;
+    gap: 35px;
+} 
+
+.menu-item>.link, .menu-item-active {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #545454;
+    cursor: default;
+}
+  
+  .menu-item>.link{
+    display:inline-block;
+    margin-bottom: 3px;
+    vertical-align: top;
+    letter-spacing: 0.0025em;
+    transition: color 0.3s ease-in-out, cursor 0.3s ease-in-out;
+  }
+  
+  .menu-item:hover>.link{
+    color: #292929;
+    border-bottom: none;
+    cursor: pointer;
+  }
+  
+  .menu-item-active, .menu-item:active {
+    border-bottom: 3px solid #f1cdb3;
+  }
+  
+  .menu-item:active>.link{
+    margin-bottom: 0;
+  }
+
+  /* Header End*/
