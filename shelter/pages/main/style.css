@@ -139,17 +139,22 @@ body{
   letter-spacing: 0.06em;
   color: #f1cdb3;
   text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-  margin: 0;
+  margin: 0 0 10px;
+  max-height: 35px;
   min-width: 184px;
+  transition: color 0.3s ease-in-out;
 }
 
 .logo-subtitle{
+  display:block;
+  text-align: right;
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 0.1em;
-  color: #f1cdb3;
+  color: #fff;
   min-width: 179px;
+  transition: color 0.3s ease-in-out;
 }
 
 .logo{
@@ -157,6 +162,10 @@ body{
   flex-direction: column;
   align-items: self-end;
   gap: 10px;
+}
+
+.logo:hover .logo-title{
+  color: #fff;
 }
 
 .menu-list{
