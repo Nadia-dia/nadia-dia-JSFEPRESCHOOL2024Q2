@@ -424,7 +424,7 @@ body{
 }
 
 .card-name {
-  max-height: 23px;
+  line-height: 23px;
   margin: 30px 0;
 }
 
@@ -494,23 +494,30 @@ body{
 }
 
 .in-addition-section .content-container {
-  padding-left: 183px;
-  padding-right: 182px;
+  width: 100%;
+  max-width: 915px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 3.75em;
   text-align: justify;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .donation-dog-image{
   display: inline-block;
-  margin-top: 11px;
+  max-height: 261px;
 }
 
 .in-addition-section .content-wrapper{
   max-width: 380px;
   display: inline-flex;
   flex-direction: column;
+  align-items: flex-start;
   row-gap: 20px;
   vertical-align: top;
-  margin-left: 25px;
 }
 
 .in-addition-section .heading{
@@ -684,7 +691,6 @@ body{
   }
 
   /*Help section*/
-  
   .help-list{
     column-gap: 9%;
   }
@@ -693,7 +699,12 @@ body{
     width: 100%;
     max-width: 170px;
   }
+}
 
+@media(max-width: 884px){
+  .in-addition-section .content-container{
+    justify-content: center;
+  }
 }
 
 @media(max-width: 768px){
