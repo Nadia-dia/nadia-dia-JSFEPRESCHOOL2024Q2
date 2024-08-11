@@ -601,7 +601,7 @@ body{
   justify-content: space-between;
   width: 100%;
   padding: 56px 40px 60px;
-  background-image: url(../../assets/images/footer-puppy.png);
+  background-image: url(../../assets/images/footer-puppy-300x310.png);
   background-position: bottom right 4.1%;
   background-repeat: no-repeat;
   background-size: content;
@@ -627,7 +627,7 @@ body{
 .footer-heading {
   max-height: 90px;
   font-size: 35px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.059em;
   color: #fff;
 }
 
@@ -873,6 +873,32 @@ body{
   }
 }
 
+/*Footer-320*/
+@media(max-width:620px){
+  .footer .content-container{
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 40px;
+    justify-content: center;
+    padding-bottom: 296px;
+    background-image: url(../../assets/images/footer-puppy-260x269.png);
+  }
+
+  .footer-heading{
+    text-align: center;
+  }
+
+  .footer-contacts, 
+  .footer-locations{
+    align-items: center;
+    row-gap: 40px;
+  }
+
+  .location-name{
+    align-self: flex-start;
+  }
+}
+
 @media(max-width: 530px){
   .start-screen .heading,
   .start-screen .subheading,
@@ -946,7 +972,6 @@ body{
   .our-friends-section .heading { 
     max-width: 90%;
   }
-
 
   .start-screen .content-wrapper{
     margin-bottom: 105px;
@@ -1026,5 +1051,23 @@ body{
   .in-addition-paragraph{
     max-width: 280px;
     text-align: justify;
+  }
+
+  .footer-heading{
+    font-size: 25px;
+  }
+
+  .footer-contacts,
+  .footer-locations {
+    row-gap: 40px;
+    justify-content: flex-start;
+  }
+
+  .footer-contacts{
+    min-height: auto;
+  }
+
+  .footer-locations{
+    max-width: 300px;
   }
 }
