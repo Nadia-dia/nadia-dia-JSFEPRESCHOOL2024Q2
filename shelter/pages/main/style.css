@@ -591,11 +591,11 @@ body{
 
 .footer .content-container {
   display: flex;
-  justify-content: left;
-  column-gap: 160px;
+  justify-content: space-between;
+  width: 100%;
   padding: 56px 40px 60px;
   background-image: url(../../assets/images/footer-puppy.png);
-  background-position: bottom right 40px;
+  background-position: bottom right 4.1%;
   background-repeat: no-repeat;
   background-size: content;
 }
@@ -614,6 +614,7 @@ body{
 
 .footer-locations{
   max-width: 302px;
+  margin-right: 38.3%;
 }
 
 .footer-heading {
@@ -679,7 +680,13 @@ body{
 }
 
 @media(max-width: 1180px){
+  .our-friends-section .content-container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .slider {
+    margin: 0 auto;
     max-width: 708px;
     column-gap: 0.8em;
   }
@@ -699,11 +706,42 @@ body{
     width: 100%;
     max-width: 170px;
   }
+
+  /*Footer*/
+  .footer .content-container{
+    padding-top: 30px;
+  }
+
+  .footer-locations {
+    margin-right: 34%;
+  }
+}
+
+/*Footer*/
+@media(max-width: 1030px){
+  .footer-locations {
+    margin-right: 30%;
+  }
+}
+
+@media(max-width: 980px){
+  .footer .content-container{
+    padding: 30px 4px 375px;
+    background-position: bottom right 50%;
+  }
+
+  .footer-locations {
+    margin: 0;
+  }
 }
 
 @media(max-width: 884px){
   .in-addition-section .content-container{
     justify-content: center;
+  }
+
+  .cards-wrapper:nth-child(3){
+    overflow:hidden;
   }
 }
 
