@@ -213,6 +213,10 @@ body{
   margin-bottom: 0;
 }
 
+.button-burger {
+  display: none;
+}
+
 .start-screen{
   width: 100%;
   display: flex;
@@ -295,6 +299,8 @@ body{
 
 .start-screen img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* Start-screen end */
 
@@ -676,6 +682,23 @@ body{
   }
 }
 
+@media(max-width: 1279px){
+  .start-screen{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .start-screen .content-wrapper{
+    margin-bottom: 0;
+    flex-grow: 0;
+  }
+
+  .start-screen picture{
+    align-self: flex-end;
+  }
+}
+
 @media(max-width: 1180px){
   .our-friends-section .content-container{
     padding-left: 0;
@@ -757,21 +780,15 @@ body{
   }
 
   /*Start-screen*/
-  .start-screen{
-    justify-content: center;
-  }
-  
   .start-screen .content-wrapper{
+    max-width: 460px;
+    flex-basis: 0;
     margin-top: 0;
-    flex-grow: 0;
+    margin-bottom: 100px;
   }
 
   .button-start-screen{
     align-self: center;
-  }
-
-  .start-screen img {
-    padding-left: 12.1%;
   }
 
   /*Help*/
@@ -783,6 +800,76 @@ body{
     width: 100%;
     max-width: 170px;
   }
+}
 
+@media(max-width:767px){
+  .header-top-wrapper{
+    align-items: center;
+  }
 
+  .nav-menu{
+    display: none;
+  }
+
+  .button-burger{
+    display:block;
+    padding: 0;
+    border: 0;
+    position: relative;
+    width: 30px;
+    height: 24px;
+    background-color: transparent;
+  }
+
+  .burger-line{
+    position: absolute;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #f1cdb3;
+  }
+
+  .burger-line:first-child{
+    top: 0;
+  }
+
+  .burger-line:last-child{
+    bottom: 0;
+  }
+
+  .burger-line:nth-child(2){
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media(max-width: 705px){
+  .header .content-container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .header-top-wrapper{
+    margin: 0 0.6em 3.75em;
+  }
+}
+
+@media(max-width: 530px){
+  .start-screen .heading,
+  .start-screen .subheading{ 
+    align-self: center;
+    text-align: center
+  }
+}
+
+@media(max-width: 390px){
+  .start-screen .heading{ 
+    font-size: 1.5625em;
+    max-width: 70%;
+    letter-spacing: 0.06em;
+  }
+
+  .start-screen .content-wrapper{
+    margin-bottom: 105px;
+  }
 }
