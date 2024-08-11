@@ -714,7 +714,10 @@ body{
   .cards-wrapper{
     max-width: 580px;
     column-gap: 2.5em;
-    overflow: hidden;
+  }
+
+  .card:last-child{
+    overflow:hidden;
   }
 
   /*Help section*/
@@ -761,15 +764,12 @@ body{
     justify-content: center;
   }
 
-  .cards-wrapper:nth-child(3){
-    overflow:hidden;
-  }
+
 }
 
 @media(max-width: 768px){
   /* Header */
   .header .content-container,
-  .our-friends-section .content-container
   {
     padding-left: 3.905%;
     padding-right: 3.905%;
@@ -841,6 +841,21 @@ body{
     top: 50%;
     transform: translateY(-50%);
   }
+
+}
+
+/*Our-pets section*/
+@media(max-width: 730px){
+  .cards-wrapper{
+    max-width: 270px;
+    overflow: hidden;
+  }
+
+  .slider{
+    max-width: 500px;
+    justify-content: space-evenly;
+    column-gap: 0;
+  }
 }
 
 @media(max-width: 705px){
@@ -857,9 +872,13 @@ body{
 @media(max-width: 530px){
   .start-screen .heading,
   .start-screen .subheading,
-  .about-section .heading { 
+  .about-section .heading{ 
     align-self: center;
     text-align: center;
+  }
+
+  .our-friends-section .heading { 
+    max-width: 85%;
   }
 
   .about-section .content-container{
@@ -873,14 +892,46 @@ body{
   .about-section .content-wrapper{
     flex: 0 1 460px;
   }
+
+  .our-friends-section .content-container{
+    padding:2.625em 0;
+  }
+}
+
+@media(max-width: 420px){
+  .slider{
+    max-width: 320px;
+    row-gap: 1.25em;
+  }
+
+  .arrow-left{
+    order: 1;
+  }
+
+  .arrow-right{
+    order: 1;
+  }
+
+  .slider{
+    flex-wrap: wrap;
+  }
 }
 
 @media(max-width: 390px){
+  .start-screen .heading{
+    line-height: 1.28;
+  }
+
   .start-screen .heading,
-  .about-section .heading { 
+  .about-section .heading,
+  .our-friends-section .heading { 
     font-size: 1.5625em;
     letter-spacing: 0.06em;
-    max-width: 85%;
+    max-width: 87%;
+  }
+
+  .our-friends-section .heading { 
+    max-width: 90%;
   }
 
 
@@ -895,4 +946,9 @@ body{
   .about-section .content-wrapper{
     gap: 1.375em;
   }
+
+  .our-friends-section .content-container{
+    gap: 2.625em;
+  }
+
 }
