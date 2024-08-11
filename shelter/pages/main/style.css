@@ -584,6 +584,11 @@ body{
   line-height: 1.5;
   color:  #b2b2b2;
 }
+
+.in-addition-section img{
+  height: auto;
+  max-width: 100%;
+}
 /* In-addition section end */
 
 /* Footer start */
@@ -871,7 +876,8 @@ body{
 @media(max-width: 530px){
   .start-screen .heading,
   .start-screen .subheading,
-  .about-section .heading{ 
+  .about-section .heading,
+  .in-addition-section .heading{ 
     align-self: center;
     text-align: center;
   }
@@ -893,8 +899,13 @@ body{
   }
 
   .our-friends-section .content-container,
-  .help-section .content-container{
+  .help-section .content-container,
+  .in-addition-section .content-container{
     padding:2.625em 0;
+  }
+
+  .in-addition-section .subheading{
+    max-width: 300px;
   }
 }
 
@@ -925,7 +936,8 @@ body{
   .start-screen .heading,
   .about-section .heading,
   .our-friends-section .heading,
-  .help-section .heading { 
+  .help-section .heading,
+  .in-addition-section .heading { 
     font-size: 1.5625em;
     letter-spacing: 0.06em;
     max-width: 80%;
@@ -980,5 +992,39 @@ body{
 
   .help-item:last-child{
     margin-right: auto;
+  }
+
+  .in-addition-section .content-container{
+    gap: 2.45em;
+    padding:2.625em 0 2.4em;
+  }
+
+
+  .in-addition-section .content-wrapper{
+    max-width: 300px;
+    align-items: center;
+  }
+
+  .in-addition-section .heading { 
+    max-width: 75%;
+  }
+
+  .in-addition-section .subheading{
+    font-size: 15px;
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 160%;
+    max-height: 24px;
+  }
+
+  .card-number-link{
+    font-size: 15px;
+    line-height: 110%;
+    padding: 13px 15px 13px 60px;
+  }
+
+  .in-addition-paragraph{
+    max-width: 280px;
+    text-align: justify;
   }
 }
