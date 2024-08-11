@@ -856,20 +856,43 @@ body{
 
 @media(max-width: 530px){
   .start-screen .heading,
-  .start-screen .subheading{ 
+  .start-screen .subheading,
+  .about-section .heading { 
     align-self: center;
-    text-align: center
+    text-align: center;
+  }
+
+  .about-section .content-container{
+    padding:2.625em 1.5625em;
+  }
+
+  .about-section .subheading{
+    text-align: justify;
+  }
+
+  .about-section .content-wrapper{
+    flex: 0 1 460px;
   }
 }
 
 @media(max-width: 390px){
-  .start-screen .heading{ 
+  .start-screen .heading,
+  .about-section .heading { 
     font-size: 1.5625em;
-    max-width: 70%;
     letter-spacing: 0.06em;
+    max-width: 85%;
   }
+
 
   .start-screen .content-wrapper{
     margin-bottom: 105px;
+  }
+
+  .about-section .content-container{
+    row-gap: 2.625em;
+  }
+
+  .about-section .content-wrapper{
+    gap: 1.375em;
   }
 }
