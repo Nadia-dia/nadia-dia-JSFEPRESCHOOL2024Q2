@@ -4,7 +4,7 @@
     font-style: italic;
     font-weight: 700;
     src: local("Georgia Bold Italic"), local("Georgia-Bold-Italic"), 
-        url('../../assets/fonts/georgia/georgia-bold-italic.ttf') format('ttf'); 
+        url('../../assets/fonts/georgia/georgia-bold-italic.ttf') format('truetype'); 
   }  
 
 /* georgia-700 - latin */
@@ -13,7 +13,7 @@
     font-style: normal;
     font-weight: 700;
     src: local("Georgia Bold"), local("Georgia-Bold"),
-         url('../../assets/fonts/georgia/georgia-bold.ttf') format('ttf'); 
+         url('../../assets/fonts/georgia/georgia-bold.ttf') format('truetype'); 
   }
 
 /* georgia-regular-italic - latin */
@@ -22,7 +22,7 @@
     font-style: italic;
     font-weight: 400;
     src: local("Georgia Italic"), local("Georgia-Italic"), 
-        url('../../assets/fonts/georgia/georgia-italic.ttf') format('ttf'); 
+        url('../../assets/fonts/georgia/georgia-italic.ttf') format('truetype'); 
   }
 
 /* georgia-regular - latin */
@@ -31,7 +31,7 @@
     font-style: normal;
     font-weight: 400;
     src: local("Georgia Regular"), local("Georgia-Regular"),
-         url('../../assets/fonts/georgia/georgia-regular.ttf') format('ttf'); 
+         url('../../assets/fonts/georgia/georgia-regular.ttf') format('truetype'); 
   }
 
 /* arial-900 - latin */
@@ -40,7 +40,7 @@
     font-style: normal;
     font-weight: 900;
     src: local("Arial Black"), local("Arial-Black"),
-         url('../../assets/fonts/arial/arial-black.ttf') format('ttf'); 
+         url('../../assets/fonts/arial/arial-black.ttf') format('truetype'); 
   }
 
 /* arial-700-italic - latin */
@@ -49,7 +49,7 @@
     font-style: italic;
     font-weight: 700;
     src: local("Arial Bold Italic"), local("Arial-Bold-Italic"), 
-        url('../../assets/fonts/arial/arial-bold-italic.ttf') format('ttf'); 
+        url('../../assets/fonts/arial/arial-bold-italic.ttf') format('truetype'); 
   }  
 
 /* arial-700 - latin */
@@ -58,7 +58,7 @@
     font-style: normal;
     font-weight: 700;
     src: local("Arial Bold"), local("Arial-Bold"),
-         url('../../assets/fonts/arial/arial-bold.ttf') format('ttf'); 
+         url('../../assets/fonts/arial/arial-bold.ttf') format('truetype'); 
   }
 
 /* arial-italic - latin */
@@ -67,7 +67,7 @@
     font-style: italic;
     font-weight: 400;
     src: local("Arial Italic"), local("Arial-Italic"), 
-        url('../../assets/fonts/arial/arial-italic.ttf') format('ttf'); 
+        url('../../assets/fonts/arial/arial-italic.ttf') format('truetype'); 
   }
 
 /* arial-regular - latin */
@@ -76,7 +76,7 @@
     font-style: normal;
     font-weight: 400;
     src: local("Arial Regular"), local("Arial-Regular"),
-         url('../../assets/fonts/arial/arial-regular.ttf') format('ttf'); 
+         url('../../assets/fonts/arial/arial-regular.ttf') format('truetype'); 
   }
 
 /* inter-regular - latin */
@@ -121,7 +121,7 @@ body{
 
 .header .content-container {
   max-height: 120px;
-  padding: 30px 40px;
+  padding: 30px 3.125%;
   display: flex;
   justify-content: space-between;
 }
@@ -211,6 +211,10 @@ body{
 .menu-item:active>.link{
     margin-bottom: 0;
 }
+
+.button-burger {
+    display: none;
+}
 /* Header End*/
 
 /* Pets start*/
@@ -223,7 +227,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 45px;
-    padding: 80px 40px 100px;
+    padding: 80px 0 100px;
 }
 
 .heading {
@@ -232,7 +236,6 @@ body{
     line-height: 1.3;
     margin: 0;
     width: 100%;
-    height: 100%;
 }
 
 .our-friends-section .heading{
@@ -245,12 +248,13 @@ body{
 }
 
 .cards-wrapper{
+    max-width: 93.75%;
     padding: 15px 0;
     display: flex;
     flex-wrap: wrap;
-    column-gap:40px;
+    column-gap: 10px;
+    justify-content: space-between;
     row-gap:32px;
-    max-height: 930px;
 }
 
 .card {
@@ -374,11 +378,11 @@ body{
   
 .footer .content-container {
     display: flex;
-    justify-content: left;
-    column-gap: 160px;
-    padding: 56px 40px 60px;
-    background-image: url(../../assets/images/footer-puppy.png);
-    background-position: bottom right 40px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 56px 3.125% 60px;
+    background-image: url(../../assets/images/footer-puppy-300x310.png);
+    background-position: bottom right 4.1%;
     background-repeat: no-repeat;
     background-size: content;
 }
@@ -397,12 +401,13 @@ body{
   
 .footer-locations{
     max-width: 302px;
+    margin-right: 38.3%;
 }
   
 .footer-heading {
     max-height: 90px;
     font-size: 35px;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.059em;
     color: #fff;
 }
   
@@ -453,3 +458,171 @@ body{
     color: #fddcc4;
 }
 /* Footer end */
+
+
+/*Shelter 2 Adaptive start*/
+/*Footer*/
+@media(max-width: 1030px){
+    .footer-locations {
+      margin-right: 30%;
+    }
+}
+
+@media(max-width: 980px){
+    .footer .content-container{
+      padding: 30px 4px 375px;
+      justify-content: space-evenly;
+      background-position: bottom right 50%;
+    }
+  
+    .footer-locations {
+      margin: 0;
+    }
+}
+
+@media(max-width: 950px){
+    .header .content-container
+    {
+        padding-left: 3.906%;
+        padding-right: 3.906%;
+    }
+
+    .our-friends-section .content-container{
+        gap: 30px;
+        padding-bottom: 76px;;
+    }
+
+    .cards-wrapper{
+        column-gap: 40px;
+        max-width: 75.53%;
+        max-height: 1365px;
+        overflow: hidden;
+        padding: 0;
+        margin-bottom: 10px;;
+    }
+}
+
+@media(max-width:767px){
+    .header .content-container{
+        align-items: center;
+    }
+
+    .nav-menu{
+      display: none;
+    }
+  
+    .button-burger{
+      display:block;
+      padding: 0;
+      border: 0;
+      position: relative;
+      width: 30px;
+      height: 22px;
+      background-color: transparent;
+    }
+  
+    .burger-line{
+      position: absolute;
+      right: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #000;
+    }
+  
+    .burger-line:first-child{
+      top: 0;
+    }
+  
+    .burger-line:last-child{
+      bottom: 0;
+    }
+  
+    .burger-line:nth-child(2){
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .cards-wrapper{
+        max-width: 270px;
+    }
+
+    .navigation{
+        width: 100%;
+        max-width: 340px;
+        gap: 10px;
+        justify-content: space-between;
+    }
+}
+
+/*Footer-320*/
+@media(max-width:620px){
+    .footer .content-container{
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 40px;
+      justify-content: center;
+      padding-bottom: 296px;
+      background-image: url(../../assets/images/footer-puppy-260x269.png);
+    }
+  
+    .footer-heading{
+      text-align: center;
+    }
+  
+    .footer-contacts, 
+    .footer-locations{
+      align-items: center;
+      row-gap: 40px;
+    }
+  
+    .location-name{
+      align-self: flex-start;
+    }
+}
+
+@media(max-width: 430px){
+    .our-friends-section .heading { 
+        font-size: 1.5625em;
+        letter-spacing: 0.06em;
+      }
+}
+
+@media(max-width: 390px){
+    .header .content-container{
+        padding-left: 6.25%;
+        padding-right: 6.25%;
+    }
+
+    .our-friends-section .content-container{
+        gap: 42px;
+        padding: 13.1% 3.125%;
+    }
+
+    .cards-wrapper{
+        margin-bottom: 0;
+    }
+
+    .navigation{
+        justify-content: space-evenly;
+    }
+
+    .footer-heading{
+        font-size: 25px;
+        line-height: 1.28;
+        max-width: 85%;
+    }
+    
+    .footer-contacts,
+    .footer-locations {
+        row-gap: 40px;
+        justify-content: flex-start;
+    }
+    
+    .footer-contacts{
+        min-height: auto;
+    }
+    
+    .footer-locations{
+        max-width: 300px;
+    }
+}
