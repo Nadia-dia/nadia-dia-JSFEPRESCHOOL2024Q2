@@ -121,7 +121,7 @@ body{
 
 .header .content-container {
   max-height: 120px;
-  padding: 30px 40px;
+  padding: 30px 3.125%;
   display: flex;
   justify-content: space-between;
 }
@@ -211,6 +211,10 @@ body{
 .menu-item:active>.link{
     margin-bottom: 0;
 }
+
+.button-burger {
+    display: none;
+}
 /* Header End*/
 
 /* Pets start*/
@@ -223,7 +227,7 @@ body{
     flex-direction: column;
     align-items: center;
     gap: 45px;
-    padding: 80px 40px 100px;
+    padding: 80px 3.125% 100px;
 }
 
 .heading {
@@ -376,7 +380,7 @@ body{
     display: flex;
     justify-content: left;
     column-gap: 160px;
-    padding: 56px 40px 60px;
+    padding: 56px 3.125% 60px;
     background-image: url(../../assets/images/footer-puppy.png);
     background-position: bottom right 40px;
     background-repeat: no-repeat;
@@ -453,3 +457,66 @@ body{
     color: #fddcc4;
 }
 /* Footer end */
+
+/*Shelter 2 Adaptive start*/
+@media(max-width: 950px){
+    .header .content-container,
+    .our-friends-section .content-container,
+    .footer .content-container
+    {
+        padding-left: 3.906%;
+        padding-right: 3.906%;
+    }
+}
+
+@media(max-width:767px){
+    .header .content-container{
+        align-items: center;
+    }
+
+    .nav-menu{
+      display: none;
+    }
+  
+    .button-burger{
+      display:block;
+      padding: 0;
+      border: 0;
+      position: relative;
+      width: 30px;
+      height: 22px;
+      background-color: transparent;
+    }
+  
+    .burger-line{
+      position: absolute;
+      right: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #000;
+    }
+  
+    .burger-line:first-child{
+      top: 0;
+    }
+  
+    .burger-line:last-child{
+      bottom: 0;
+    }
+  
+    .burger-line:nth-child(2){
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+
+  @media(max-width: 390px){
+    .header .content-container,
+    .our-friends-section .content-container,
+    .footer .content-container
+    {
+        padding-left: 6.25%;
+        padding-right: 6.25%;
+    }
+}
