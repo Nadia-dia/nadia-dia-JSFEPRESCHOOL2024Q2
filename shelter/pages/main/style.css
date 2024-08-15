@@ -4,7 +4,7 @@
     font-style: italic;
     font-weight: 700;
     src: local("Georgia Bold Italic"), local("Georgia-Bold-Italic"), 
-        url('../../assets/fonts/georgia/georgia-bold-italic.ttf') format('ttf'); 
+        url('../../assets/fonts/georgia/georgia-bold-italic.ttf') format('truetype'); 
   }  
 
 /* georgia-700 - latin */
@@ -13,7 +13,7 @@
     font-style: normal;
     font-weight: 700;
     src: local("Georgia Bold"), local("Georgia-Bold"),
-         url('../../assets/fonts/georgia/georgia-bold.ttf') format('ttf'); 
+         url('../../assets/fonts/georgia/georgia-bold.ttf') format('truetype'); 
   }
 
 /* georgia-regular-italic - latin */
@@ -22,7 +22,7 @@
     font-style: italic;
     font-weight: 400;
     src: local("Georgia Italic"), local("Georgia-Italic"), 
-        url('../../assets/fonts/georgia/georgia-italic.ttf') format('ttf'); 
+        url('../../assets/fonts/georgia/georgia-italic.ttf') format('truetype'); 
   }
 
 /* georgia-regular - latin */
@@ -31,7 +31,7 @@
     font-style: normal;
     font-weight: 400;
     src: local("Georgia Regular"), local("Georgia-Regular"),
-         url('../../assets/fonts/georgia/georgia-regular.ttf') format('ttf'); 
+         url('../../assets/fonts/georgia/georgia-regular.ttf') format('truetype'); 
   }
 
 /* arial-900 - latin */
@@ -40,7 +40,7 @@
     font-style: normal;
     font-weight: 900;
     src: local("Arial Black"), local("Arial-Black"),
-         url('../../assets/fonts/arial/arial-black.ttf') format('ttf'); 
+         url('../../assets/fonts/arial/arial-black.ttf') format('truetype'); 
   }
 
 /* arial-700-italic - latin */
@@ -49,7 +49,7 @@
     font-style: italic;
     font-weight: 700;
     src: local("Arial Bold Italic"), local("Arial-Bold-Italic"), 
-        url('../../assets/fonts/arial/arial-bold-italic.ttf') format('ttf'); 
+        url('../../assets/fonts/arial/arial-bold-italic.ttf') format('truetype'); 
   }  
 
 /* arial-700 - latin */
@@ -58,7 +58,7 @@
     font-style: normal;
     font-weight: 700;
     src: local("Arial Bold"), local("Arial-Bold"),
-         url('../../assets/fonts/arial/arial-bold.ttf') format('ttf'); 
+         url('../../assets/fonts/arial/arial-bold.ttf') format('truetype'); 
   }
 
 /* arial-italic - latin */
@@ -67,7 +67,7 @@
     font-style: italic;
     font-weight: 400;
     src: local("Arial Italic"), local("Arial-Italic"), 
-        url('../../assets/fonts/arial/arial-italic.ttf') format('ttf'); 
+        url('../../assets/fonts/arial/arial-italic.ttf') format('truetype'); 
   }
 
 /* arial-regular - latin */
@@ -76,7 +76,7 @@
     font-style: normal;
     font-weight: 400;
     src: local("Arial Regular"), local("Arial-Regular"),
-         url('../../assets/fonts/arial/arial-regular.ttf') format('ttf'); 
+         url('../../assets/fonts/arial/arial-regular.ttf') format('truetype'); 
   }
 
 /* inter-regular - latin */
