@@ -1,22 +1,29 @@
-console.log(`Страница Pets (40)\n\n
-1. Проверка верстки +7\n\n
-верстка страницы валидная +4\n
-логотип в хедере состоит из текстовых элементов +1\n
-страница содержит ровно один элемент <h1> +1\n
-добавлен favicon +1\n\n
-2. Вёрстка соответствует макету +15\n\n
-блок <header> +5\n
-блок Our Friends +5\n
-блок <footer> +5\n\n
-3. Требования к css +4\n\n
-при уменьшении масштаба страницы браузера или увеличении ширины страницы (>1280px) вёрстка размещается по центру, а не сдвигается в сторону и не растягивается по всей ширине +2\n
-фоновый цвет тянется на всю ширину страницы +2\n\n
-4. Интерактивность элементов +14\n\n
-элемент Our pets в навигации подсвечен и неинтерактивен, остальные элементы навигации интерактивны +2\n
-доступные кнопки пагинации (вправо) активны, недоступные (влево) - неактивны (disabled) +2\n
-каждая карточка с питомцем в блоке Our Friends интерактивна при наведении на любую область этой карточки +2\n
-плавная прокрутка по якорям +2\n
-выполняются все ссылочные связи согласно Перечню ссылочных связей для страницы Pets +2\n
-выполнена интерактивность ссылок и кнопок +2\n
-обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике, не влияющее на соседние элементы +2\n
-`)    
+const blackout = document.createElement('div');
+blackout.classList.add('blackout');
+blackout.style.cssText = `position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0; z-index: 1;`; 
+document.body.prepend(blackout);
+
+document.addEventListener('DOMContentLoaded', function(){
+    document.querySelector('.button-burger').addEventListener('click', toggleMenu);
+    document.querySelector('.menu-item-active').addEventListener('click', () => toggleMenu());
+    document.querySelector('.blackout').addEventListener('click', () => toggleMenu());
+
+    let items = document.querySelectorAll('.menu-item');
+    for(let item of items){
+    item.addEventListener('click', () => toggleMenu());
+    }
+});
+
+// Блокировка прокрутки страницы
+function toggleMenu(){
+    document.querySelector('.header').classList.toggle('open');
+
+    if(document.querySelector('.header').classList.contains('open')){
+        document.body.style.overflow = 'hidden'
+        blackout.style.opacity = 0.5;
+    } else {
+        document.body.style.overflow = 'visible';
+        blackout.style.opacity = 0.0;
+    }
+    
+}  

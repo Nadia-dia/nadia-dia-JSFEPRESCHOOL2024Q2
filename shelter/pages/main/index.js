@@ -1,48 +1,31 @@
-console.log(` 66/100\n
-1. Вёрстка страницы Main соответствует макету при ширине экрана 1280px: +14/14\n
-блок <header>: +2\n
-блок Not only: +2\n
-блок About: +2\n
-блок Our Friends: +2\n
-блок Help: +2\n
-блок In addition: +2\n
-блок <footer>: +2\n
-2. Вёрстка страницы Main соответствует макету при ширине экрана 768px: +14/14\n
-блок <header>: +2\n
-блок Not only: +2\n
-блок About: +2\n
-блок Our Friends: +2\n
-блок Help: +2\n
-блок In addition: +2\n
-блок <footer>: +2\n
-3. Вёрстка страницы Main соответствует макету при ширине экрана 320px: +14/14\n
-блок <header>: +2\n
-блок Not only: +2\n
-блок About: +2\n
-блок Our Friends: +2\n
-блок Help: +2\n
-блок In addition: +2\n
-блок <footer>: +2\n
-4. Вёрстка страницы Pets соответствует макету при ширине экрана 1280px: +0/6\n
-блок <header>: +0/2\n
-блок Our Friends: +0/2\n
-блок <footer>: +0/2\n
-5. Вёрстка страницы Pets соответствует макету при ширине экрана 768px: +0/6\n
-блок <header>: +0/2\n
-блок Our Friends: +0/2\n
-блок <footer>: +0/2\n
-6. Вёрстка страницы Pets соответствует макету при ширине экрана 320px: +0/6\n
-блок <header>: +0/2\n
-блок Our Friends: +0/2\n
-блок <footer>: +0/2\n
-7. Ни на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки, справа от отдельных блоков не появляются белые поля. Весь контент страницы при этом сохраняется: не обрезается и не удаляется: +10/20\n
-нет полосы прокрутки при ширине страницы Main от 1280рх до 768рх: +5\n
-нет полосы прокрутки при ширине страницы Main от 768рх до 320рх: +5\n
-нет полосы прокрутки при ширине страницы Pets от 1280рх до 768рх: +0/5\n
-нет полосы прокрутки при ширине страницы Pets от 768рх до 320рх: +0/5\n
-8. Верстка резиновая: при плавном изменении размера экрана от 1280px до 320px верстка подстраивается под этот размер, элементы верстки меняют свои размеры и расположение, не наезжают друг на друга, изображения могут менять размер, но сохраняют правильные пропорции (Примеры неправильной и правильной реализации): +4/8\n
-на странице Main: +4\n
-на странице Pets: +0/4\n
-9. При ширине экрана меньше 768px на обеих страницах меню в хедере скрывается, появляется иконка бургер-меню: +2/4\n
-10. Верстка обеих страниц валидная: для проверки валидности вёрстки используйте сервис https://validator.w3.org/ : +8/8\n
-`)
+const blackout = document.createElement('div');
+blackout.classList.add('blackout');
+blackout.style.cssText = `position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0; z-index: 1;`; 
+document.body.prepend(blackout);
+
+document.addEventListener('DOMContentLoaded', function(){
+    document.querySelector('.button-burger').addEventListener('click', toggleMenu);
+    document.querySelector('.menu-item-active').addEventListener('click', () => toggleMenu());
+    document.querySelector('.blackout').addEventListener('click', () => toggleMenu());
+
+    let items = document.querySelectorAll('.menu-item');
+    for(let item of items){
+    item.addEventListener('click', () => toggleMenu());
+    }
+});
+
+
+
+// Блокировка прокрутки страницы
+function toggleMenu(){
+    document.querySelector('.header-top-wrapper').classList.toggle('open');
+
+    if(document.querySelector('.header-top-wrapper').classList.contains('open')){
+        document.body.style.overflow = 'hidden'
+        blackout.style.opacity = 0.5;
+    } else {
+        document.body.style.overflow = 'visible';
+        blackout.style.opacity = 0.0;
+    }
+    
+} 
