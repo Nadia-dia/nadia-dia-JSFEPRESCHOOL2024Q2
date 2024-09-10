@@ -118,6 +118,8 @@ body{
 }
 
 .header .content-container {
+  position: relative;
+  overflow: hidden;
   padding: 30px 40px 0px;
 }
 
@@ -810,7 +812,79 @@ body{
   }
 
   .nav-menu{
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: -20em;
+    top: 0;
+    width: 20em;
+    height: 100vh;
+    background:  #292929;
+    visibility: hidden;
+    transition: right 0.9s, visibility 0.5s;
+    overflow: auto;
+    z-index: 2;
+  }
+
+  .nav-menu::before{
+    content: "";
+    position: fixed;
+    top: 0;
+    right: -20em;
+    width: 320px;
+    height: 5.625em;
+    background-color: #292929;
+    z-index: 3;
+    visibility: hidden;
+    transition: right 0.9s, visibility 0.5s;
+  }
+
+  .menu-list{
+    display: block;
+    margin: 0 auto;
+    max-width: 15.1875em;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  @media(max-height: 500px) {
+    .menu-list{
+      position: absolute;
+      top: 5.625em;
+    }
+  }
+
+  .menu-item .link, .menu-item-active {
+    font-size: 2em;
+    line-height: 160%;
+  }
+
+  .menu-item {
+    margin-bottom: 2.5em;
+  }
+
+  .menu-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .menu-item-active{
+    margin-bottom: 1.25em;;
+  }
+
+  .header-top-wrapper.open .nav-menu{
+    right: 0;
+    visibility: visible;
+  }
+
+  .header-top-wrapper.open .nav-menu::before{
+    visibility: visible;
+    right: 0;
+  }
+
+  .header-top-wrapper.open+.start-screen{
+    overflow: hidden;
   }
 
   .button-burger{
@@ -821,6 +895,9 @@ body{
     width: 30px;
     height: 24px;
     background-color: transparent;
+    transition: transform 0.5s;
+    cursor: pointer;
+    z-index: 4;
   }
 
   .burger-line{
@@ -829,6 +906,7 @@ body{
     height: 2px;
     width: 100%;
     background-color: #f1cdb3;
+    transition: background-color 0.3s;
   }
 
   .burger-line:first-child{
@@ -842,6 +920,14 @@ body{
   .burger-line:nth-child(2){
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .button-burger:hover span {
+    background-color: #fafafa;
+  }
+
+  .header-top-wrapper.open .button-burger{
+    transform: rotate(90deg);
   }
 
 }
