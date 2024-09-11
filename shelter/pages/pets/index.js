@@ -1,12 +1,11 @@
 const blackout = document.createElement('div');
 blackout.classList.add('blackout');
-blackout.style.cssText = `position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0; z-index: 1;`; 
+blackout.style.cssText = `position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0; z-index: 1; transition: opacity 0.9s ease;`; 
 document.body.prepend(blackout);
 
 document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('.button-burger').addEventListener('click', toggleMenu);
     document.querySelector('.menu-item-active').addEventListener('click', () => toggleMenu());
-    document.querySelector('.blackout').addEventListener('click', () => toggleMenu());
 
     let items = document.querySelectorAll('.menu-item');
     for(let item of items){
@@ -19,6 +18,10 @@ function toggleMenu(){
     document.querySelector('.header').classList.toggle('open');
 
     if(document.querySelector('.header').classList.contains('open')){
+        document.querySelector('.blackout').addEventListener('click', function(){
+            document.querySelector('.header').classList.remove('open');
+            blackout.style.opacity = 0.0;
+        });
         document.body.style.overflow = 'hidden'
         blackout.style.opacity = 0.5;
     } else {
