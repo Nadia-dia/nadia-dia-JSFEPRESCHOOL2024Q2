@@ -1,0 +1,131 @@
+/* georgia-700-italic - latin */
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 200;
+    src: local("Manrope ExtraLight"), local("Manrope-ExtraLight"), 
+        url('assets/fonts/Manrope/Manrope-ExtraLight.ttf') format('truetype'); 
+  }  
+
+/* georgia-700 - latin */
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 300;
+    src: local("Manrope Light"), local("Manrope-Light"),
+         url('assets/fonts/Manrope/Manrope-Light.ttf') format('truetype'); 
+  }
+
+/* georgia-regular-italic - latin */
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Manrope Regular"), local("Manrope-Regular"), 
+        url('assets/fonts/Manrope/Manrope-Regular.ttf') format('truetype'); 
+  }
+
+/* georgia-regular - latin */
+@font-face {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Manrope Bold"), local("Manrope-Bold"),
+         url('assets/fonts/Manrope/Manrope-Bold.ttf') format('truetype'); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope';
+}
+
+/* Header */
+
+.header,
+.footer {
+    background-color: #242423;
+}
+
+.header{
+    border-bottom: 0.3125em solid #F5CB5C;
+}
+
+.content-container{
+    max-width: 80em;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header>.content-container{
+    min-height: 5em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.25em;
+}
+
+.logo{
+    color: #E8EDDF;
+}
+
+.logo>i{
+    line-height: 0;
+    top: 0;
+    vertical-align: middle;
+}
+
+.searchbox{
+    max-width: 25em;
+    width: 100%;
+    border: 0.07em solid #E8EDDF;
+    border-radius: 1.5em;
+    padding: 0.6em 0.85em;
+    outline: none;
+    font-family: "Manrope";
+}
+
+.searchbox:focus{
+    box-shadow: 0 0 0.55em #f3c033;
+}
+
+/* Footer */
+
+.footer-list {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0 1.25em;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.footer-item,
+.github-link {
+    padding: 10px;
+    font-size: 20px;                         ;
+    color: #E8EDDF;
+    transition: 0.3s;
+}
+
+.github-link:hover{
+    color: #CFDBD5;
+    text-decoration: none;
+    border-radius: 15%;
+}
+
+.footer-item:hover {
+    text-decoration: none; 
+    border-radius: 22%;
+    background-color:#333533;
+    box-shadow: 0 0 0.55em #333533;
+    
+}
+
+.footer-item:nth-child(2):hover{
+    color:#E8EDDF;
+    background-color: inherit;
+    box-shadow: 0 0 0;
+}
