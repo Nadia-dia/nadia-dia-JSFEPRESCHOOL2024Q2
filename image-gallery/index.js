@@ -6,17 +6,20 @@ getData();
 
 const searchButton = document.querySelector('.search-button');
 const searchField = document.querySelector('.search');
+const crossButton = document.querySelector('.cross-button');
 
 searchButton.addEventListener('click', getInput);
 searchField.addEventListener('keypress', function(e){
     let key = e.which || e.keyCode;
     if(key === 13) searchButton.click();
 })
+crossButton.addEventListener('click', resetInput);
 
 function getInput(){
     let input = searchField.value;
     url=`https://api.unsplash.com/photos/random/?query=${input}&count=12&client_id=${clientID}&orientation=landscape`;
     getData();
+    setCross();
 }
 
 let state = [];
@@ -45,4 +48,14 @@ function setData(array){
         image.alt = 'image';
         galleryContainer.append(image);
     }
+}
+
+function setCross(){
+    crossButton.classList.add("visible");
+}
+
+function resetInput(){
+    searchField.value = "";
+    searchField.focus();
+    crossButton.classList.remove("visible");
 }
