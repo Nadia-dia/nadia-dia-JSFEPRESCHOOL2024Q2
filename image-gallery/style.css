@@ -41,6 +41,15 @@
     font-family: 'Manrope';
 }
 
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main{
+    flex: 1 0 auto;
+}
 /* Header */
 
 .header,
@@ -76,18 +85,53 @@
     vertical-align: middle;
 }
 
-.searchbox{
+.search-box{
     max-width: 25em;
+    width: 100%;
+    position:relative;
+}
+
+.search-button{
+    position: absolute;
+    content: '';
+    right: 0.8em;
+    top: 0.8em;
+    transition: color 0.2s ease;
+    border: 0;
+    background-color: transparent;
+}
+
+.search-button>i:hover{
+    cursor:pointer;
+    color: #F5CB5C;
+}
+
+.search{
     width: 100%;
     border: 0.07em solid #E8EDDF;
     border-radius: 1.5em;
     padding: 0.6em 0.85em;
     outline: none;
     font-family: "Manrope";
+    transition: box-shadow 0.4s;
 }
 
-.searchbox:focus{
+.search:focus {
     box-shadow: 0 0 0.55em #f3c033;
+}
+
+
+
+/*Gallery*/
+.main > .content-container{
+    padding: 1.25em;
+    display:flex;
+    justify-content: space-around;
+    row-gap: 1em;
+}
+
+.gallery-image{
+    max-width: 25em;
 }
 
 /* Footer */
@@ -113,7 +157,14 @@
 .github-link:hover{
     color: #CFDBD5;
     text-decoration: none;
-    border-radius: 15%;
+}
+
+.footer-item:nth-child(1)>i{
+    color:#E8EDDF;
+}
+
+.footer-item:nth-child(1):hover>i{
+    color: #CFDBD5;
 }
 
 .footer-item:hover {
@@ -121,11 +172,16 @@
     border-radius: 22%;
     background-color:#333533;
     box-shadow: 0 0 0.55em #333533;
-    
 }
 
 .footer-item:nth-child(2):hover{
     color:#E8EDDF;
     background-color: inherit;
     box-shadow: 0 0 0;
+}
+
+@media (max-width: 663px){
+    .search-box{
+        margin-bottom: 1rem;
+    }
 }
