@@ -8,6 +8,10 @@ const searchButton = document.querySelector('.search-button');
 const searchField = document.querySelector('.search');
 
 searchButton.addEventListener('click', getInput);
+searchField.addEventListener('keypress', function(e){
+    let key = e.which || e.keyCode;
+    if(key === 13) searchButton.click();
+})
 
 function getInput(){
     let input = searchField.value;
