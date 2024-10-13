@@ -14,23 +14,25 @@ pipeUp.src = 'assets/img/flappy-bird-pipe-up.png';
 pipeDown.src = 'assets/img/flappy-bird-pipe-down.png';
 
 // Bird's position
-const gap = 80;
+const gap = 75;
 let x = 20;
 let y = canvas.height/2;
-const gravitation = 1;
-const jump = 30;
+
+let gravitation = 0.05;
+const jump = 25;
 
 // Pipe's Array;
 let pipes = [];
 pipes[0] = {
-    x: canvas.width,
-    y: 0,
+    x: 490,
+    y: -15,
 };
 
 // Bird's position Up
 document.addEventListener('keypress', (e) => {
     if(e.keyCode == 32 && y > 0 + bird.height / 2){ 
         y -= jump;
+        gravitation = 0.05;
     }
 });
 
@@ -42,7 +44,7 @@ function drawGame(){
         context.drawImage(pipeDown, pipe.x, pipe.y + pipeUp.height + gap);
 
         // Animation movement on X
-        --pipe.x;
+        pipe.x -= 0.5;
         if(pipe.x == 480){ 
             pipes.push({ // adding next pipe
                 x: canvas.width,
@@ -52,11 +54,12 @@ function drawGame(){
         
     };
 
-
     context.drawImage(front, 0, canvas.height - front.height + gap);
     context.drawImage(bird, x, y);
 
+
     y += gravitation;
+    gravitation += 0.05; // 
 
     requestAnimationFrame(drawGame);
 }
