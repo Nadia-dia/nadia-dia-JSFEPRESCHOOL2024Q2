@@ -12,16 +12,16 @@ body{
 #canvas{
     display: block;
     margin: 0 auto;
-    padding: 2.5em 4em 0;
+    padding: 1em 4em 0;
 }
 
 .game-name{
     display: block;
-    max-width: 30em;
+    max-width: 25em;
     width: 100%;
     height: auto;
     margin: 0 auto;
-    padding: 2em 5em 0;
+    padding: 1.7em 5em 0;
 }
 
 
