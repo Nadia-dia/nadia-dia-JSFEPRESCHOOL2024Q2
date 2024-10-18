@@ -24,4 +24,49 @@ body{
     padding: 1.7em 5em 0;
 }
 
+.footer-list {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    padding: 0 1.25em;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.footer-item,
+.github-link {
+    padding: 10px;
+    font-size: 20px;                         ;
+    color: #fcfcfc;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.github-link:hover{
+    color: #CFDBD5;
+    text-decoration: none;
+}
+
+.footer-item:nth-child(1)>i{
+    color:#fcfcfc;
+}
+
+.footer-item:nth-child(1):hover>i{
+    color: #E8EDDF;
+}
+
+.footer-item:hover {
+    text-decoration: none; 
+    background-color:#776977;
+    box-shadow: 0 0 0.55em #262726;
+}
+
+.footer-item:nth-child(2):hover{
+    color:#E8EDDF;
+    background-color: inherit;
+    box-shadow: 0 0 0;
+}
+
+
 
