@@ -17,7 +17,14 @@ bird.src = 'assets/img/flappy-bird-smiley.png';
 birdAngry.src = 'assets/img/flappy-bird-angry.png';
 ground.src = 'assets/img/mountains.png';
 
+// Audio
+const wing_sound = new Audio();
+const point_sound = new Audio();
+const hit_sound = new Audio();
 
+wing_sound.src = 'assets/audio/sfx_wing.wav';
+point_sound.src = 'assets/audio/sfx_point.wav';
+hit_sound.src = 'assets/audio/sfx_hit.wav';
 
 // Bird's position
 const gap = 90;
@@ -42,6 +49,7 @@ document.addEventListener('keydown', (e) => {
     if(e.code === 'Space' && yPos > 0 + bird.height / 2 && !gameOver){ 
         yPos -= jump;
         gravitation = .05;
+        wing_sound.play();
     }
 });
 
@@ -72,6 +80,7 @@ function drawGame(){
         // Score
         if(pipe.x === 75){
             ++score;
+            point_sound.play();
         }
 
 
@@ -84,7 +93,11 @@ function drawGame(){
             console.log('Collision with ground or pipes detected! Reloading...');
             bird.src = birdAngry.src;
             gameOver = true;
+            hit_sound.play();
+            
             gameOverAnimation();
+            
+            
             return;
         }
     }
@@ -107,7 +120,6 @@ ground.onload = drawGame;
 function gameOverAnimation(){
     context.clearRect(0,0, canvas.width, canvas.height);
     context.drawImage(background, 0, 0);
-
     for(let pipe of pipes){
         context.drawImage(pipeUp, pipe.x, pipe.y);
         context.drawImage(pipeDown, pipe.x, pipe.y + pipeUp.height + gap);
@@ -118,6 +130,12 @@ function gameOverAnimation(){
     context.fillStyle = "#000";
     context.font = "24px Verdana";
     context.fillText(`Score: ${score}`, 5, 25);
-    requestAnimationFrame(gameOverAnimation);
+
+    if(yPos <= canvas.height){
+        requestAnimationFrame(gameOverAnimation);
+    }
+       
+
+    
 }
 
