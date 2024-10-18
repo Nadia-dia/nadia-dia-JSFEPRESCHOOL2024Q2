@@ -17,6 +17,8 @@ bird.src = 'assets/img/flappy-bird-smiley.png';
 birdAngry.src = 'assets/img/flappy-bird-angry.png';
 ground.src = 'assets/img/mountains.png';
 
+
+
 // Bird's position
 const gap = 90;
 let xPos = 100;
@@ -26,6 +28,7 @@ let acceleration = 1;
 let gravitation = .01;
 const jump = 35;
 let gameOver = false;
+let score = 0;
 
 // Pipe's Array;
 let pipes = [];
@@ -66,6 +69,12 @@ function drawGame(){
             });
         }
 
+        // Score
+        if(pipe.x === 75){
+            ++score;
+        }
+
+
         // Checking the collision with ground and pipes
         if(
             yPos + bird.height >= (canvas.height - 60) ||
@@ -86,6 +95,10 @@ function drawGame(){
     yPos += gravitation;
     gravitation = Math.min(gravitation + 0.05, 2); 
 
+    context.fillStyle = "#000";
+    context.font = "24px Verdana";
+    context.fillText(`Score: ${score}`, 5, 25);
+
     requestAnimationFrame(drawGame);
 }
 
@@ -98,11 +111,13 @@ function gameOverAnimation(){
     for(let pipe of pipes){
         context.drawImage(pipeUp, pipe.x, pipe.y);
         context.drawImage(pipeDown, pipe.x, pipe.y + pipeUp.height + gap);
-
     }
     
     context.drawImage(ground, 0, canvas.height - ground.height + 60);
     context.drawImage(bird, xPos, yPos++);
+    context.fillStyle = "#000";
+    context.font = "24px Verdana";
+    context.fillText(`Score: ${score}`, 5, 25);
     requestAnimationFrame(gameOverAnimation);
 }
 
