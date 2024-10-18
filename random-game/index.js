@@ -142,9 +142,6 @@ function gameOverAnimation(){
         die_sound.play();
         setTimeout(() => {
             context.drawImage(gameEnd, 0, 0, 640, 380);
-            //context.fillStyle = "#000";
-            //context.font = "24px Verdana";
-            //context.fillText(`Score: ${score}`, canvas.width / 2, canvas.height - 50);
         }, 300);
         
     } 
