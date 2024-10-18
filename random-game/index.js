@@ -8,6 +8,7 @@ const pipeDown = new Image();
 const bird = new Image();
 const birdAngry = new Image();
 const ground = new Image();
+const gameEnd = new Image();
 
 
 background.src = 'assets/img/background.jpg';
@@ -16,15 +17,18 @@ pipeDown.src = 'assets/img/flappy-bird-pipe-down.png';
 bird.src = 'assets/img/flappy-bird-smiley.png';
 birdAngry.src = 'assets/img/flappy-bird-angry.png';
 ground.src = 'assets/img/mountains.png';
+gameEnd.src = 'assets/img/game-over.jpg';
 
 // Audio
 const wing_sound = new Audio();
 const point_sound = new Audio();
 const hit_sound = new Audio();
+const die_sound = new Audio();
 
 wing_sound.src = 'assets/audio/sfx_wing.wav';
 point_sound.src = 'assets/audio/sfx_point.wav';
 hit_sound.src = 'assets/audio/sfx_hit.wav';
+die_sound.src = 'assets/audio/sfx_die.wav';
 
 // Bird's position
 const gap = 90;
@@ -131,11 +135,18 @@ function gameOverAnimation(){
     context.font = "24px Verdana";
     context.fillText(`Score: ${score}`, 5, 25);
 
-    if(yPos <= canvas.height){
+    if (yPos <= canvas.height - 5){
         requestAnimationFrame(gameOverAnimation);
-    }
-       
+    } else {
 
-    
+        die_sound.play();
+        setTimeout(() => {
+            context.drawImage(gameEnd, 0, 0, 640, 380);
+            //context.fillStyle = "#000";
+            //context.font = "24px Verdana";
+            //context.fillText(`Score: ${score}`, canvas.width / 2, canvas.height - 50);
+        }, 300);
+        
+    } 
+
 }
-
